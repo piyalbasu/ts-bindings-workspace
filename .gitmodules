@@ -1,9 +1,0 @@
-[submodule "sub"]
-	shallow = true
-	sparsecheckout = true
-[submodule "hello-world"]
-	path = hello-world
-	url = https://github.com/stellar/soroban-examples
-[submodule "soroban-examples"]
-	path = soroban-examples
-	url = https://github.com/stellar/soroban-examples
