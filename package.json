@@ -1,0 +1,15 @@
+{
+  "name": "ts-bindings-workspace",
+  "version": "1.0.0",
+  "description": "",
+  "workspaces": ["bindings", "web-app"],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npm run dev -w web-app",
+    "bindings:hello": "soroban contract bindings typescript --network testnet --contract-id $(cat .soroban/hello-id) --output-dir bindings/hello-soroban-client --overwrite",
+    "bindings:incrementor": "soroban contract bindings typescript --network testnet --contract-id $(cat .soroban/increment-id) --output-dir bindings/incrementor-client --overwrite",
+    "postinstall": "npm run bindings:hello && npm run bindings:incrementor"
+  },
+  "author": "",
+  "license": "ISC"
+}
