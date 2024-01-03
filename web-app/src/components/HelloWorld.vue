@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from 'vue';
 import * as HelloContract from "bindings/hello-soroban-client";
 import * as IncrementContract from "bindings/incrementor-client";
 
