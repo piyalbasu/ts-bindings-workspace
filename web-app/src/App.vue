@@ -2,6 +2,7 @@
 <script setup lang="ts">
 import { Suspense } from 'vue';
 import HelloWorld from './components/HelloWorld.vue'
+import ConnectFreighter from "./components/ConnectFreighter.vue";
 </script>
 
 <template>
@@ -14,7 +15,10 @@ import HelloWorld from './components/HelloWorld.vue'
     </a>
   </div>
   <Suspense>
-    <HelloWorld />
+    <div>
+      <ConnectFreighter />
+      <HelloWorld />
+    </div>
   </Suspense>
 </template>
 

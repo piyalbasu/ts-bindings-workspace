@@ -1,16 +1,16 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { Contract as HelloContract, networks as helloNetworks } from "bindings/hello-soroban-client";
-import { Contract as IncrementContract, networks as incrementNetworks } from "bindings/incrementor-client";
+import * as HelloContract from "bindings/hello-soroban-client";
+import * as IncrementContract from "bindings/incrementor-client";
 
 
-const greeter = new HelloContract({
-  ...helloNetworks.testnet,
+const greeter = new HelloContract.Contract({
+  ...HelloContract.networks.testnet,
   rpcUrl: "https://soroban-testnet.stellar.org", // from https://soroban.stellar.org/docs/reference/rpc#public-rpc-providers
 });
 
-const incrementor = new IncrementContract({
-  ...incrementNetworks.testnet,
+const incrementor = new IncrementContract.Contract({
+  ...IncrementContract.networks.testnet,
   rpcUrl: "https://soroban-testnet.stellar.org", // from https://soroban.stellar.org/docs/reference/rpc-list#sdf-futurenet-and-testnet-only
 });
 
